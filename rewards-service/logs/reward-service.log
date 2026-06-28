@@ -1,0 +1,118 @@
+2026-06-28 23:34:10.335 [main] INFO  c.r.r.RewardsServiceApplicationTests - Starting RewardsServiceApplicationTests using Java 21.0.11 with PID 1680 (started by 91996 in C:\Users\91996\Downloads\rewards-service\rewards-service)
+2026-06-28 23:34:10.337 [main] DEBUG c.r.r.RewardsServiceApplicationTests - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-28 23:34:10.339 [main] INFO  c.r.r.RewardsServiceApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-06-28 23:34:11.183 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.1.0.Final
+2026-06-28 23:34:11.787 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-28 23:34:11.917 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 111 ms. Found 3 JPA repository interfaces.
+2026-06-28 23:34:14.327 [main] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-28 23:34:14.475 [main] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-06-28 23:34:14.976 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-28 23:34:15.034 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-06-28 23:34:15.328 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:rewardsdb user=SA
+2026-06-28 23:34:15.330 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-06-28 23:34:15.382 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-28 23:34:15.444 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:rewardsdb]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: REWARDSDB/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-28 23:34:16.894 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-28 23:34:16.976 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-28 23:34:17.143 [main] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-28 23:34:17.737 [main] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-28 23:34:18.617 [main] INFO  o.s.b.h.a.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:rewardsdb'
+2026-06-28 23:34:18.805 [main] INFO  c.r.r.RewardsServiceApplicationTests - Started RewardsServiceApplicationTests in 9.128 seconds (process running for 11.532)
+2026-06-28 23:34:18.811 [main] WARN  o.s.c.events.SpringDocAppInitializer - SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-06-28 23:34:18.811 [main] WARN  o.s.c.events.SpringDocAppInitializer - SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-06-28 23:34:18.896 [task-1] INFO  c.r.rewards.service.RewardsService - Starting rewards calculation for all customers. Rolling window: 3 months
+2026-06-28 23:34:18.902 [task-1] DEBUG c.r.rewards.service.RewardsService - Filtering purchases with cutoff date: 2026-04-01
+2026-06-28 23:34:18.904 [task-1] INFO  c.r.r.s.RewardPointsCalculator - calculateRewardPoints...
+2026-06-28 23:34:18.905 [task-1] INFO  c.r.r.s.RewardPointsCalculator - calculatePointsForHighThreshold...
+2026-06-28 23:34:18.905 [task-1] INFO  c.r.r.s.RewardPointsCalculator - calculatePointsForRange...
+2026-06-28 23:34:18.905 [task-1] DEBUG c.r.r.s.RewardPointsCalculator - Calculated 90 points for purchase amount: $120.0
+2026-06-28 23:34:18.908 [task-1] INFO  c.r.rewards.service.RewardsService - Successfully generated reward reports for 1 customers. Triggering async DB save.
+2026-06-28 23:34:18.908 [task-1] INFO  c.r.rewards.service.RewardsService - Async DB save operation started for 1 records
+2026-06-28 23:34:19.088 [task-1] DEBUG c.r.rewards.service.RewardsService - Saved/Updated reward records for customer ID: 101
+2026-06-28 23:34:19.088 [task-1] INFO  c.r.rewards.service.RewardsService - Async DB persistence completed successfully.
+2026-06-28 23:34:19.119 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-28 23:34:19.123 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-06-28 23:34:19.126 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2026-06-28 23:39:00.406 [main] INFO  c.r.r.RewardsServiceApplicationTests - Starting RewardsServiceApplicationTests using Java 21.0.11 with PID 10576 (started by 91996 in C:\Users\91996\Downloads\rewards-service\rewards-service)
+2026-06-28 23:39:00.409 [main] DEBUG c.r.r.RewardsServiceApplicationTests - Running with Spring Boot v4.1.0, Spring v7.0.8
+2026-06-28 23:39:00.411 [main] INFO  c.r.r.RewardsServiceApplicationTests - No active profile set, falling back to 1 default profile: "default"
+2026-06-28 23:39:01.237 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 9.1.0.Final
+2026-06-28 23:39:01.809 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-06-28 23:39:01.916 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 90 ms. Found 3 JPA repository interfaces.
+2026-06-28 23:39:04.029 [main] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-06-28 23:39:04.142 [main] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.4.1.Final
+2026-06-28 23:39:04.603 [main] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-06-28 23:39:04.652 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2026-06-28 23:39:04.859 [main] INFO  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Added connection conn0: url=jdbc:h2:mem:rewardsdb user=SA
+2026-06-28 23:39:04.861 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2026-06-28 23:39:04.890 [main] WARN  org.hibernate.orm.deprecation - HHH90000025: H2Dialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-06-28 23:39:04.923 [main] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:h2:mem:rewardsdb]
+	Database driver: H2 JDBC Driver
+	Database dialect: H2Dialect
+	Database version: 2.4.240
+	Default catalog/schema: REWARDSDB/PUBLIC
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: 100
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-06-28 23:39:05.932 [main] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-06-28 23:39:06.018 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-06-28 23:39:06.450 [main] WARN  o.s.b.j.a.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2026-06-28 23:39:07.486 [main] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-06-28 23:39:07.666 [main] INFO  o.s.b.h.a.H2ConsoleAutoConfiguration - H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:rewardsdb'
+2026-06-28 23:39:07.857 [main] INFO  c.r.r.RewardsServiceApplicationTests - Started RewardsServiceApplicationTests in 8.09 seconds (process running for 10.305)
+2026-06-28 23:39:07.862 [main] WARN  o.s.c.events.SpringDocAppInitializer - SpringDoc /v3/api-docs endpoint is enabled by default. To disable it in production, set the property 'springdoc.api-docs.enabled=false'
+2026-06-28 23:39:07.863 [main] WARN  o.s.c.events.SpringDocAppInitializer - SpringDoc /swagger-ui.html endpoint is enabled by default. To disable it in production, set the property 'springdoc.swagger-ui.enabled=false'
+2026-06-28 23:39:07.979 [task-1] INFO  c.r.rewards.service.RewardsService - Starting rewards calculation for all customers. Rolling window: 3 months
+2026-06-28 23:39:07.984 [task-1] DEBUG c.r.rewards.service.RewardsService - Filtering purchases with cutoff date: 2026-04-01
+2026-06-28 23:39:07.987 [task-1] INFO  c.r.r.s.RewardPointsCalculator - calculateRewardPoints...
+2026-06-28 23:39:07.987 [task-1] INFO  c.r.r.s.RewardPointsCalculator - calculatePointsForHighThreshold...
+2026-06-28 23:39:07.987 [task-1] INFO  c.r.r.s.RewardPointsCalculator - calculatePointsForRange...
+2026-06-28 23:39:07.988 [task-1] DEBUG c.r.r.s.RewardPointsCalculator - Calculated 90 points for purchase amount: $120.0
+2026-06-28 23:39:07.990 [task-1] INFO  c.r.rewards.service.RewardsService - Successfully generated reward reports for 1 customers. Triggering async DB save.
+2026-06-28 23:39:07.990 [task-1] INFO  c.r.rewards.service.RewardsService - Async DB save operation started for 1 records
+2026-06-28 23:39:07.998 [task-1] DEBUG c.r.rewards.service.RewardsService - Saved/Updated reward records for customer ID: 101
+2026-06-28 23:39:07.999 [task-1] INFO  c.r.rewards.service.RewardsService - Async DB persistence completed successfully.
+2026-06-28 23:39:08.027 [task-2] INFO  c.r.rewards.service.RewardsService - Starting rewards calculation for all customers. Rolling window: 3 months
+2026-06-28 23:39:08.028 [task-2] DEBUG c.r.rewards.service.RewardsService - Filtering purchases with cutoff date: 2026-04-01
+2026-06-28 23:39:08.028 [task-2] INFO  c.r.r.s.RewardPointsCalculator - calculateRewardPoints...
+2026-06-28 23:39:08.029 [task-2] INFO  c.r.r.s.RewardPointsCalculator - calculatePointsForHighThreshold...
+2026-06-28 23:39:08.029 [task-2] INFO  c.r.r.s.RewardPointsCalculator - calculatePointsForRange...
+2026-06-28 23:39:08.029 [task-2] DEBUG c.r.r.s.RewardPointsCalculator - Calculated 70 points for purchase amount: $110.0
+2026-06-28 23:39:08.029 [task-2] INFO  c.r.rewards.service.RewardsService - Successfully generated reward reports for 1 customers. Triggering async DB save.
+2026-06-28 23:39:08.029 [task-2] INFO  c.r.rewards.service.RewardsService - Async DB save operation started for 1 records
+2026-06-28 23:39:08.029 [task-2] DEBUG c.r.rewards.service.RewardsService - Saved/Updated reward records for customer ID: 103
+2026-06-28 23:39:08.031 [task-2] INFO  c.r.rewards.service.RewardsService - Async DB persistence completed successfully.
+2026-06-28 23:39:08.045 [main] INFO  c.r.r.s.RewardPointsCalculator - calculatePointsForHighThreshold...
+2026-06-28 23:39:08.059 [task-3] INFO  c.r.rewards.service.RewardsService - Starting rewards calculation for all customers. Rolling window: 3 months
+2026-06-28 23:39:08.060 [task-3] DEBUG c.r.rewards.service.RewardsService - Filtering purchases with cutoff date: 2026-04-01
+2026-06-28 23:39:08.060 [task-3] INFO  c.r.rewards.service.RewardsService - Successfully generated reward reports for 0 customers. Triggering async DB save.
+2026-06-28 23:39:08.060 [task-3] WARN  c.r.rewards.service.RewardsService - Empty points map provided to async DB save task. Aborting.
+2026-06-28 23:39:08.073 [main] INFO  c.r.r.s.RewardPointsCalculator - calculatePointsForRange...
+2026-06-28 23:39:08.086 [task-4] INFO  c.r.rewards.service.RewardsService - Starting rewards calculation for all customers. Rolling window: 3 months
+2026-06-28 23:39:08.087 [task-4] DEBUG c.r.rewards.service.RewardsService - Filtering purchases with cutoff date: 2026-04-01
+2026-06-28 23:39:08.088 [task-4] INFO  c.r.r.s.RewardPointsCalculator - calculateRewardPoints...
+2026-06-28 23:39:08.088 [task-4] INFO  c.r.r.s.RewardPointsCalculator - calculatePointsForHighThreshold...
+2026-06-28 23:39:08.088 [task-4] INFO  c.r.r.s.RewardPointsCalculator - calculatePointsForRange...
+2026-06-28 23:39:08.088 [task-4] DEBUG c.r.r.s.RewardPointsCalculator - Calculated 0 points for purchase amount: $50.0
+2026-06-28 23:39:08.089 [task-4] INFO  c.r.rewards.service.RewardsService - Successfully generated reward reports for 1 customers. Triggering async DB save.
+2026-06-28 23:39:08.089 [task-4] INFO  c.r.rewards.service.RewardsService - Async DB save operation started for 1 records
+2026-06-28 23:39:08.090 [task-4] DEBUG c.r.rewards.service.RewardsService - Saved/Updated reward records for customer ID: 105
+2026-06-28 23:39:08.090 [task-4] INFO  c.r.rewards.service.RewardsService - Async DB persistence completed successfully.
+2026-06-28 23:39:08.122 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-28 23:39:08.127 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-06-28 23:39:08.130 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
