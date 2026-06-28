@@ -255,3 +255,8 @@ java.lang.NumberFormatException: For input string: "10AB"
 2026-06-29 01:10:35.795 [task-11] INFO  c.r.rewards.service.RewardsService - Async DB save operation started for 1 records
 2026-06-29 01:10:35.799 [task-11] DEBUG c.r.rewards.service.RewardsService - Saved/Updated reward records for customer ID: 102
 2026-06-29 01:10:35.799 [task-11] INFO  c.r.rewards.service.RewardsService - Async DB persistence completed successfully.
+2026-06-29 01:34:29.433 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-06-29 01:34:29.466 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-06-29 01:34:29.491 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-06-29 01:34:29.523 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2026-06-29 01:34:29.537 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
