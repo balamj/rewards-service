@@ -18,7 +18,7 @@ INSERT INTO purchases (id, customer_id, purchase_amount, purchase_date) VALUES (
 INSERT INTO purchases (id, customer_id, purchase_amount, purchase_date) VALUES (5, 103, 110.0, '2026-04-05');
 INSERT INTO purchases (id, customer_id, purchase_amount, purchase_date) VALUES (6, 103, 75.0, '2026-05-22');
 
--- Customer 104: NOT ELIGIBLE (All transactions are under $50)
+-- Customer 104: NOT ELIGIBLE (All transactions are under $50 - yields 0 points)
 INSERT INTO purchases (id, customer_id, purchase_amount, purchase_date) VALUES (7, 104, 45.0, '2026-04-20');
 INSERT INTO purchases (id, customer_id, purchase_amount, purchase_date) VALUES (8, 104, 20.0, '2026-05-11');
 
