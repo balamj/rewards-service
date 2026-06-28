@@ -6,7 +6,7 @@ INSERT INTO customers (id, customer_name) VALUES (104, 'David Miller');
 INSERT INTO customers (id, customer_name) VALUES (105, 'Emma Wilson');
 INSERT INTO customers (id, customer_name) VALUES (106, 'John Smith');
 
--- Customer 101: Regular High Spender (Eligible for max points)
+-- Customer 101: Regular High Spender (Eligible)
 INSERT INTO purchases (id, customer_id, purchase_amount, purchase_date) VALUES (1, 101, 120.0, '2026-04-10');
 INSERT INTO purchases (id, customer_id, purchase_amount, purchase_date) VALUES (2, 101, 50.0, '2026-05-15');
 
